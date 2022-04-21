@@ -1,0 +1,6 @@
+export const ROUTING_URLS = {
+  MAIN: 'MAIN',
+  HOME: 'HOME',
+  APP_DETAIL: 'APP_DETAIL',
+  SETTING: 'SETTING',
+};
