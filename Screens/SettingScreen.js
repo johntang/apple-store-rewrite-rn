@@ -3,8 +3,9 @@ import { Picker } from '@react-native-picker/picker';
 import { Button, StyleSheet } from 'react-native';
 import i18n from 'i18n-js';
 import { useState } from 'react';
-import { Title } from '../Components/cutomComponents';
+import { SubTitle, Title } from '../Components/cutomComponents';
 import { useSetting } from '../Provider/SettingContext';
+import { VERSION } from '../Utils/config';
 
 export default function SettingScreen({}) {
   const {
@@ -65,6 +66,7 @@ export default function SettingScreen({}) {
         title="CLICK ME TO CRASH APP!"
         onPress={() => setIsErrorComponentVisible(true)}
       ></Button>
+      <SubTitle style={{ marginTop: 40 }}>{`Version: v${VERSION}`}</SubTitle>
       {isErrorComponentVisible && <ComponentWithError />}
     </SafeAreaView>
   );
